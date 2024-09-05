@@ -11,7 +11,8 @@
     "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
     "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
     "prepare": "husky install",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "npm run build && git add . && git commit -m 'Deploy' && git push origin gh-pages"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
