@@ -12,7 +12,7 @@
     "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
     "prepare": "husky install",
     "export": "next export",
-    "deploy": "npm run build && git add . && git commit -m 'Deploy' && git push origin gh-pages"
+    "deploy": "npm run build && git checkout -b gh-pages && mkdir -p out && cp -r .next out && cp -r public out && git add . && git commit -m 'Deploy static site' && git push origin gh-pages && git checkout main"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
